@@ -1554,4 +1554,8 @@
     <string name="battery_text_color">Text</string>
     <string name="statusbar_color_switch_summary">Enable/Disable Custom Icon Colors</string>
 
+    <!-- Captive Portal -->
+    <string name="captive_portal_detection">Captive portal detection</string>
+    <string name="captive_portal_detection_summary">If disabled, a connection to google servers is not required in order to detect data connection.</string>
+
 </resources>
