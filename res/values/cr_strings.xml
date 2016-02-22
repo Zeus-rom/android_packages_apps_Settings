@@ -1131,9 +1131,12 @@
     <string name="statusbar_tuner_category_title">Hide items from statusbar</string>
 
     <!-- Hide Lockscreen clock & date -->
-    <string name="hide_lockscreen_items_title">Lockscreen items</string>
-    <string name="hide_lockscreen_clock_title">Show lockscreen clock</string>
-    <string name="hide_lockscreen_date_title">Show lockscreen date</string>
+    <string name="hide_lockscreen_clock_title">Clock</string>
+    <string name="hide_lockscreen_clock_summary">Show lockscreen clock</string>
+    <string name="hide_lockscreen_date_title">Date</string>
+    <string name="hide_lockscreen_date_summary">Show lockscreen date</string>
+    <string name="hide_lockscreen_alarm_title">Alarm</string>
+    <string name="hide_lockscreen_alarm_summary">Show lockscreen alarm</string>
 
     <!-- Smart pulldown -->
     <string name="smart_pulldown_title">Smart pulldown</string>
@@ -1159,6 +1162,9 @@
     <string name="lockscreen_clock_date_color">Date</string>
     <string name="lockscreen_colors_reset_title">Reset lockscreen colors</string>
     <string name="lockscreen_colors_reset_message">Are you sure you want to reset these colors to default?</string>
+    <string name="lockscreen_colors_title">Lockscreen colors</string>
+    <string name="lockscreen_owner_info_color">Owner info</string>
+    <string name="lockscreen_alarm_color">Alarm</string>
     <string name="yes">YES</string>
 
     <!-- Header image shadow -->
