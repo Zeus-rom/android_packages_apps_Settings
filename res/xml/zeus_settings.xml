@@ -56,6 +56,13 @@
         android:title="@string/zeus_navbar_settings" 
         android:icon="@drawable/zeus_navbar_icon"/>
 
+    <!-- Qs Colors -->
+    <PreferenceScreen
+            android:id="qs_colors"
+            android:title="@string/quick_settings_colors"
+	    android:summary="@string/qs_colors_summary"	
+            android:fragment="com.android.settings.zeus.QsColors" />
+
     <!-- Recent panel settings -->
     <PreferenceScreen
          android:key="recents_panel"
