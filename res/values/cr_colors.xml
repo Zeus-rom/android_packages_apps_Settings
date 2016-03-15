@@ -4,5 +4,6 @@
 
     <!-- Gesture Anywhere -->
     <color name="ga_gesture_color">@android:color/holo_blue_light</color>
+    <color name="action_picker_fab_background">@color/theme_accent</color>
 
 </resources>

@@ -91,6 +91,14 @@
         </dashboard-tile>
     </dashboard-category>
 
+        <!-- Navigation Bar -->
+        <dashboard-tile
+                android:id="@+id/navbar"
+                android:title="@string/zeus_navbar_settings"
+                android:fragment="com.android.settings.zeus.Navbar"
+                android:icon="@drawable/zeus_navbar_icon"
+                />
+
     <!-- DEVICE -->
     <dashboard-category
             android:id="@+id/device_section"
