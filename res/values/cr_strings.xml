@@ -2,19 +2,19 @@
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <!-- About phone screen, Temasek version -->
-    <string name="temasek_version_title">Temasek unofficial version</string>
+    <!-- About phone screen, Zeus version -->
+    <string name="zeus_version_title">Zeus Version</string>
     <!-- Do NOT translate this -->
-    <string name="temasek_version_default">Build V6.3</string>
+    <string name="zeus_version_default">Build V04</string>
     <string name="android_version_title">Marshmallow</string>
-    <string name="android_version_default">6.0.1 MHC19Q Release 24</string>
+    <string name="android_version_default">6.0.1 MHC19Q Release 04</string>
 
-    <!-- temasek spare parts -->
-    <string name="temasek_settings_title">Temasek spare parts</string>
+    <!-- Zeus Toolkit -->
+    <string name="zeus_settings_title">Zeus Toolkit</string>
 
     <!-- Changelog -->
-    <string name="changelog_temasek_title">Changelog</string>
-    <string name="changelog_temasek_error">Unable to load changelog</string>
+    <string name="changelog_zeus_title">Changelog</string>
+    <string name="changelog_zeus_error">Unable to load changelog</string>
 
     <!-- General strings -->
     <string name="attention">Attention</string>
@@ -25,7 +25,7 @@
     <string name="disabled">Disabled</string>
     <string name="ok">Ok</string>
     <string name="reset_message">Reset all entries to default?</string>
-    <string name="extras_temasek_settings">Temasek Extras</string>
+    <string name="extras_zeus_settings">Zeus Extras</string>
     <string name="reset_default_message">Reset default</string>
     <string name="additional_options_title">Additional options</string>
     <string name="general_options_title">General</string>
@@ -33,7 +33,7 @@
     <string name="quicksettings_title">Quicksettings</string>
     <string name="qs_brightness_slider_title">Show brightness slider</string>
     <string name="statusbar_notifications_title">Notifications</string>
-    <string name="dlg_reset_temasek">Temasek</string>
+    <string name="dlg_reset_zeus">Zeus</string>
     <string name="cat_colors_title">Customize notification colors</string>
     <string name="cancel">Cancel</string>
 
@@ -664,10 +664,10 @@
     <string name="youtube">Youtube</string>
     <string name="zedge">Zedge</string>
 
-    <!-- Temasek lockscreen -->
-    <string name="temasek_lockscreen_title">Lockscreen</string>
-    <string name="temasek_lockscreen_category">Lockscreen settings</string>
-    <string name="temasek_lockscreen_shortcuts_category">Shortcuts</string>
+    <!-- Zeus lockscreen -->
+    <string name="zeus_lockscreen_title">Lockscreen</string>
+    <string name="zeus_lockscreen_category">Lockscreen settings</string>
+    <string name="zeus_lockscreen_shortcuts_category">Shortcuts</string>
     <!-- CM lockscreen shortcuts -->
     <string name="cm_lockscreen_shortcuts_title">Bottom corners shortcuts</string>
     <string name="cm_lockscreen_shortcuts_summary">View or change custom bottom corners lockscreen shortcuts</string>
@@ -924,12 +924,12 @@
     <string name="pa_pie_always_right_title">Pie always on the right</string>
     <string name="pa_pie_always_right_summary">Pie will be always shown on the right while in landscape</string>
 
-    <string name="reset_temasek">temasek</string>
+    <string name="reset_zeus">zeus</string>
     <string name="reset_android">Android</string>
 
-    <!-- Temasek Extra Info -->
-    <string name="temaextrainfo">Extra information</string>
-    <string name="temaextrainfo_summary">Display extra info for cpu, display, etc</string>
+    <!-- Zeus Extra Info -->
+    <string name="zeus_extrainfo">Extra information</string>
+    <string name="zeus_extrainfo_summary">Display extra info for cpu, display, etc</string>
 
     <!-- Doze options -->
     <string name="display_category_doze_options_title">Ambient display</string>

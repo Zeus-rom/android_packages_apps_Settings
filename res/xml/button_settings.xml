@@ -36,7 +36,7 @@
 
         <PreferenceScreen
             android:key="navbar_dimensions"
-            android:fragment="com.android.settings.temasek.NavBarDimensions"
+            android:fragment="com.android.settings.zeus.NavBarDimensions"
             android:title="@string/navbar_style_dimen_title"
             android:dependency="enable_nav_bar" />
 
@@ -134,7 +134,7 @@
     <PreferenceScreen
          android:key="pa_pie_control"
          android:title="@string/pa_pie_control_title"
-         android:fragment="com.android.settings.temasek.PieControl" />
+         android:fragment="com.android.settings.zeus.PieControl" />
 
     <com.android.settings.cyanogenmod.ButtonBacklightBrightness
         android:key="button_backlight"

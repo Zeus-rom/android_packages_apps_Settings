@@ -48,7 +48,7 @@
                 android:dependency="network_traffic_state"
                 android:defaultValue="false" />
 
-        <com.android.settings.temasek.SeekBarPreference
+        <com.android.settings.zeus.SeekBarPreference
                 android:key="network_traffic_autohide_threshold"
                 android:title="@string/network_traffic_autohide_threshold"
                 android:max="100"

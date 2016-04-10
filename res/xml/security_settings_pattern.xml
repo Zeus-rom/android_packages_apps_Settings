@@ -89,7 +89,7 @@
             android:title="@string/lockscreen_wallpaper_title"
             android:summary="@string/lockscreen_wallpaper_summary"
             android:persistent="false"
-            android:fragment="com.android.settings.temasek.LockscreenWallpaper">
+            android:fragment="com.android.settings.zeus.LockscreenWallpaper">
         </PreferenceScreen>
 
         <com.android.settings.cyanogenmod.SystemSettingSwitchPreference

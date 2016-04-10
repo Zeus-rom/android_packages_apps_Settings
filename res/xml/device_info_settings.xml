@@ -17,19 +17,19 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
         android:title="@string/about_settings">
 
-        <!-- Temasek Extra Info -->
+        <!-- Zeus Extra Info -->
         <PreferenceScreen android:key="extrainfo"
-                android:title="@string/temaextrainfo"
-                android:summary="@string/temaextrainfo_summary">
+                android:title="@string/zeus_extrainfo"
+                android:summary="@string/zeus_extrainfo_summary">
             <intent android:action="android.intent.action.MAIN"
                     android:targetPackage="com.android.settings"
-                    android:targetClass="com.android.settings.temasek.extrainfo.MainActivity" />
+                    android:targetClass="com.android.settings.zeus.extrainfo.MainActivity" />
         </PreferenceScreen>
 
         <!-- Changelog -->
         <PreferenceScreen android:key="changelog"
-                android:title="@string/changelog_temasek_title"
-                android:fragment="com.android.settings.temasek.Changelog" />
+                android:title="@string/changelog_zeus_title"
+                android:fragment="com.android.settings.zeus.Changelog" />
 
         <!-- Device status - launches activity -->
         <PreferenceScreen android:key="status_info"
@@ -136,11 +136,11 @@
                 android:title="@string/mod_version"
                 android:summary="@string/mod_version_default" />
 
-        <!-- Temasek version -->
-        <Preference android:key="temasek_version"
+        <!-- zeus version -->
+        <Preference android:key="zeus_version"
                 style="?android:preferenceInformationStyle"
-                android:title="@string/temasek_version_title"
-                android:summary="@string/temasek_version_default"/>
+                android:title="@string/zeus_version_title"
+                android:summary="@string/zeus_version_default"/>
 
         <!-- Android version -->
         <Preference android:key="android_version"

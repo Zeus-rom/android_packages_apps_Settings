@@ -2176,10 +2176,10 @@
             android:theme="@style/CryptKeeperBlankTheme"
         />
 
-        <!-- temasek activities Start -->
+        <!-- zeus activities Start -->
 
-        <!-- Temasek Extra info -->
-        <activity android:name="com.android.settings.temasek.extrainfo.MainActivity"
+        <!-- Zeus Extra info -->
+        <activity android:name="com.android.settings.zeus.extrainfo.MainActivity"
                   android:theme="@android:style/Theme.Material.Light.Dialog.NoActionBar.MinWidth">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -2187,8 +2187,8 @@
         </activity>
 
         <!-- Gesture anywhere -->
-        <activity android:name=".temasek.gestureanywhere.GestureAnywhereBuilderActivity" />
-        <activity android:name=".temasek.gestureanywhere.GestureAnywhereCreateGestureActivity" />
+        <activity android:name=".zeus.gestureanywhere.GestureAnywhereBuilderActivity" />
+        <activity android:name=".zeus.gestureanywhere.GestureAnywhereCreateGestureActivity" />
 
         <!-- PA Pie settings activity. -->
         <activity android:name="Settings$PieControlSettingsActivity"
@@ -2199,19 +2199,19 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
-                android:value="com.android.settings.temasek.PieControl" />
+                android:value="com.android.settings.zeus.PieControl" />
             <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID"
                 android:resource="@id/button_settings" />
         </activity>
 
         <!-- Selinux Switcher -->
-        <receiver android:name="com.android.settings.temasek.util.OnBoot">
+        <receiver android:name="com.android.settings.zeus.util.OnBoot">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
             </intent-filter>
         </receiver>
 
-        <!-- temasek activities End -->
+        <!-- zeus activities End -->
 
         <!-- CyanogenMod activities Start -->
         <activity android:name="Settings$ProfilesSettingsActivity"

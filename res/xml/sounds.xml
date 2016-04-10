@@ -87,7 +87,7 @@
         <PreferenceScreen
                 android:key="volume_steps"
                 android:title="@string/volume_steps_title"
-                android:fragment="com.android.settings.temasek.VolumeSteps" />
+                android:fragment="com.android.settings.zeus.VolumeSteps" />
 
         <!-- Headset -->
         <com.android.settings.cyanogenmod.CMSystemSettingSwitchPreference
