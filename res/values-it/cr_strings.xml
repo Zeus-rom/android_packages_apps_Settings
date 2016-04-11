@@ -211,7 +211,7 @@
     <string name="navbar_button_tint_title">Tinta pulsante di navigazione</string>
 
     <!-- Double Tap Navbar to Sleep -->
-    <string name="double_tap_sleep_nav_bar_title">Tocca due volte per spegnere</string>
+    <string name="double_tap_sleep_nav_bar_title">Doppio Tap per spegnere</string>
     <string name="double_tap_sleep_nav_bar_summary">Doppio Tap sulla barra di navigazione per spegnere il dispositivo</string>
 
     <!-- Ability to disable hardware keys via nav bar settings -->
@@ -290,11 +290,11 @@
     <string name="status_bar_temperature_hidden">Nascosto</string>
     <string name="status_bar_temperature_show_scale">Indicato con la scala</string>
     <string name="status_bar_temperature_hide_scale">Indicato senza scala</string>
-    <string name="status_bar_temperature_location_title">collocamento</string>
-    <string name="status_bar_temperature_location_summary">Selezionare dove la temperatura tempo viene visualizzata nella barra di stato</string>
-    <string name="status_bar_temperature_location_right">Mostra sulla destra</string>
-    <string name="status_bar_temperature_location_left">Mostra sulla sinistra</string>
-    <string name="status_bar_weather_color_title">Temperatura colore</string>
+    <string name="status_bar_temperature_location_title">Posizione</string>
+    <string name="status_bar_temperature_location_summary">Selezionare dove la temperatura del tempo viene visualizzata nella barra di stato</string>
+    <string name="status_bar_temperature_location_right">Mostra a destra</string>
+    <string name="status_bar_temperature_location_left">Mostra a sinistra</string>
+    <string name="status_bar_weather_color_title">Colore Temperatura</string>
     <string name="status_bar_weather_size_title">Dimensione del carattere</string>
     <string name="status_bar_weather_font_style_title">Carattere</string>
     <string name="status_bar_weather_font_normal">Normale</string>
@@ -468,7 +468,7 @@
     <string name="disable_fc_notifications_summary">In questo modo si consente di nascondere tutte le notifiche e di forzare la chiusura</string>
 
     <!-- Headphones icon switch -->
-    <string name="show_headset_icon_title">icona cuffie</string>
+    <string name="show_headset_icon_title">Icona cuffie</string>
     <string name="show_headset_icon_summary">Mostra icona quando sono collegate le cuffie.</string>
 
     <!-- Quick unlock -->
@@ -939,11 +939,11 @@
 
     <!-- Force expanded notifications -->
     <string name="force_expanded_notifications_title">Forza notifiche espanse</string>
-    <string name="force_expanded_notifications_summary">Disponibile solo per le applicazioni che supportano le notifiche espansi</string>
+    <string name="force_expanded_notifications_summary">Disponibile solo per le applicazioni che supportano le notifiche espanse</string>
 
     <!-- Disabling immersive mode messages -->
     <string name="disable_immersive_message_title">Disabilitare la modalità immersiva Messaggi</string>
-    <string name="disable_immersive_message_summary">In questo modo nascondere tutti i messaggi modalità immersiva</string>
+    <string name="disable_immersive_message_summary">In questo modo nasconde tutti i messaggi in modalità immersiva</string>
 
     <!-- Less Notification sounds -->
     <string name="notifications_category_title">Notifiche</string>
@@ -1104,16 +1104,16 @@
 
     <!-- Hide Lockscreen clock & date -->
     <string name="hide_lockscreen_items_title">Voci nella schermata di blocco</string>
-    <string name="hide_lockscreen_clock_title">Mostra l\'orologio nella schermata di blocco</string>
-    <string name="hide_lockscreen_date_title">Mostra la data nella schermata di blocco</string>
+    <string name="hide_lockscreen_clock_title">Mostra l\'orologio</string>
+    <string name="hide_lockscreen_date_title">Mostra la data</string>
 
     <!-- Smart pulldown -->
     <string name="smart_pulldown_title">Discesa intelligente</string>
     <string name="smart_pulldown_summary">Aprire le impostazioni rapide quando ci sono %1$s notifiche presenti</string>
     <string name="smart_pulldown_off">Spento</string>
-    <string name="smart_pulldown_dismissable">Nessun forzato</string>
-    <string name="smart_pulldown_persistent">Nessun persistente</string>
-    <string name="smart_pulldown_all">Nessun persistente o forzato</string>
+    <string name="smart_pulldown_dismissable">Non forzato</string>
+    <string name="smart_pulldown_persistent">Non persistente</string>
+    <string name="smart_pulldown_all">Ne persistente o forzato</string>
 
     <!-- QS Tiles Columns -->
     <string name="qs_num_columns_title">Numero di Tile per riga</string>
@@ -1151,6 +1151,22 @@
     <string name="heads_up_time_out_8sec">8 secondi</string>
     <string name="heads_up_time_out_10sec">10 secondi</string>
     
+	 <!-- Heads Up Snooze -->
+    <string name="heads_up_snooze">Snooze</string>
+    <string name="heads_up_snooze_summary">Le notifiche non verranno mostrate per i prossimi <xliff:g id="number">%d</xliff:g> minuti</string>
+    <string name="heads_up_snooze_1min">1 minuto</string>
+    <string name="heads_up_snooze_5min">5 minuti</string>
+    <string name="heads_up_snooze_10min">10 minuti</string>
+    <string name="heads_up_snooze_15min">15 minuti</string>
+    <string name="heads_up_snooze_20min">20 minuti</string>
+    <string name="heads_up_snooze_30min">30 minuti</string>
+    <string name="heads_up_snooze_45min">45 minuti</string>
+    <string name="heads_up_snooze_60min">60 minuti</string>
+
+    <!-- Force Heads Up on all applications -->
+    <string name="force_headsup_title">Forza heads up</string>
+    <string name="force_headsup_summary">Forza heads up in tutte le applicazioni</string>
+	
     <!-- Battery light settings -->
     <string name="battery_light_full_color_title">Carico al (90%)</string>
     <string name="battery_light_really_full_color_title">Carico al (100%)</string>
