@@ -720,21 +720,51 @@
     <string name="shortcut_action_help_delete_last_entry">Rimozione di ogni %1$s nella lista si disattivare la funzione del tutto.</string>
     <string name="shortcut_action_help_pie_second_layer_delete_last_entry">Rimozione di ogni %1$s nella lista disabiliterà  il secondo strato di torta del tutto.</string>
     
+	<!-- App sidebar -->
+    <string name="app_sidebar_title">Appbar</string>
+    <string name="app_sidebar_enable_title">Abilita Appbar</string>
+    <string name="app_sidebar_enable_summaryOn">Appbar è abilitata</string>
+    <string name="app_sidebar_enable_summaryOff">Appbar è disabilitata</string>
+    <string name="app_sidebar_setup_items_title">Imposta i contenuti nell\'Appbar</string>
+    <string name="app_sidebar_setup_items_summary">Aggiungi, rimuovi, e posiziona gli elementi nell\'Appbar</string>
+    <string name="app_sidebar_transparency_title">Trasparenza Appbar</string>
+    <string name="app_sidebar_transparency_summary">Regola il livello di trasparenza dell\'Appbar</string>
+    <string name="app_sidebar_position_title">Posizione Appbar</string>
+    <string name="app_sidebar_position_summary">Posizionare l\'Appbar sul lato sinistro o destro dello schermo</string>
+    <string name="app_sidebar_position_left">Sinistra</string>
+    <string name="app_sidebar_position_right">Destra</string>
+    <string name="app_sidebar_hide_labels_title">Nascondi l\'etichetta delle icone</string>
+    <string name="app_sidebar_hide_labels_summary">Consente di nascondere le etichette delle icone</string>
+    <string name="tab_category">Tab visibile</string>
+    <string name="use_tab_title">Display tab</string>
+    <string name="use_tab_summary">Visualizza una scheda visibile sul lato che visualizzerà l\Appbar quando viene toccato.</string>
+    <string name="tab_position_title">Posizione Tab</string>
+    <string name="tab_position_summary">Visualizza la linguetta sulla parte superiore, centrale o inferiore sul lato dello schermo.</string>
+    <string name="tab_size_title">Dimensione Tab</string>
+    <string name="tab_size_summary">Modifica le dimensioni della scheda visibile.</string>
+    <string name="trigger_category">Zona avvio</string>
+    <string name="trigger_width_title">Larghezza avvio</string>
+    <string name="trigger_width_summary">Regolare la larghezza della zona di avvio</string>
+    <string name="trigger_top_title">Posizione avvio</string>
+    <string name="trigger_top_summary">Regolare la posizione verticale della zona di avvio</string>
+    <string name="trigger_bottom_title">Altezza avvio</string>
+    <string name="trigger_bottom_summary">Regolare l\'altezza della zona di avvio</string>
+	
     <!-- Restart SystemUI -->
     <string name="restart_systemui">Riavvia SystemUI</string>
 
     <!-- App Circle sidebar -->
     <string name="category_app_circle_bar_title">App launcher</string>
-    <string name="app_circle_bar_title">Abilta App Circle Bar</string>
+    <string name="app_circle_bar_title">App Circle Bar</string>
     <string name="app_circle_bar_summary">Mostra il cerchio e avvia le applicazioni dopo aver toccato il lato destro dello schermo</string>
     <string name="app_circle_bar_included_apps_title">Applicazioni incluse</string>
     <string name="app_circle_bar_included_apps_summary">Le applicazioni che verranno mostrate in App Circle Bar</string>
     <string name="trigger_width_title">Larghezza</string>
-    <string name="trigger_width_summary">Regolare la larghezza della zona di attivazione</string>
+    <string name="trigger_width_summary">Regola la larghezza della zona di attivazione</string>
     <string name="trigger_top_title">Verticale</string>
-    <string name="trigger_top_summary">Regolare la posizione verticale della zona di attivazione</string>
+    <string name="trigger_top_summary">Regola la posizione verticale della zona di attivazione</string>
     <string name="trigger_bottom_title">Altezza</string>
-    <string name="trigger_bottom_summary">Regolare l\'altezza della zona di attivazione</string>
+    <string name="trigger_bottom_summary">Regola l\'altezza della zona di attivazione</string>
 
     <!-- Toast animations -->
     <string name="toast_animation_title">Animazioni Toast</string>
