@@ -15,7 +15,7 @@ import android.telephony.TelephonyManager;
 import android.text.format.DateFormat;
 import android.view.View;
 
-import com.android.settings.cyanogenmod.SeekBarPreference;
+import com.android.settings.zeus.SeekBarPreference;
 import com.android.internal.logging.MetricsLogger;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
