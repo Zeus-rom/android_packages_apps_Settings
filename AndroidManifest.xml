@@ -2212,6 +2212,9 @@
             </intent-filter>
         </receiver>
 
+        <!-- Hide Apps from Recents (HAFR) -->
+        <activity android:name=".zeus.HAFRAppListActivity" />
+
         <!-- zeus activities End -->
 
         <!-- CyanogenMod activities Start -->
