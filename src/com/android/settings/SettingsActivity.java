@@ -1358,11 +1358,11 @@ public class SettingsActivity extends Activity
                     if (!supported) {
                         removeTile = true;
                     }
-                } else if (id == R.id.weather_settings) {
-                    if (!getPackageManager().hasSystemFeature(
-                            CMContextConstants.Features.WEATHER_SERVICES)) {
-                        removeTile = true;
-                    }
+//                } else if (id == R.id.weather_settings) {
+//                    if (!getPackageManager().hasSystemFeature(
+//                            CMContextConstants.Features.WEATHER_SERVICES)) {
+//                        removeTile = true;
+//                    }
                 }
 
                 if (UserHandle.MU_ENABLED && UserHandle.myUserId() != 0

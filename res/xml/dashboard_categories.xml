@@ -287,13 +287,13 @@
                 android:icon="@drawable/ic_settings_date_time"
                 />
 
-        <!-- Weather -->
+        <!-- Weather 
         <dashboard-tile
                 android:id="@+id/weather_settings"
                 android:title="@string/weather_settings_title"
                 android:fragment="com.android.settings.cyanogenmod.WeatherServiceSettings"
                 android:icon="@drawable/ic_settings_weather"
-                />
+                />-->
 
         <!-- Accessibility feedback -->
         <dashboard-tile
