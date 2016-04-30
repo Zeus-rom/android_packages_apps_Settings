@@ -231,7 +231,7 @@
         <dashboard-tile
                 android:id="@+id/zeus_settings"
                 android:title="@string/zeus_settings_title"
-                android:fragment="com.android.settings.zeus.zeusSettings"
+                android:fragment="com.android.settings.zeus.ZeusSettings"
                 android:icon="@drawable/ic_settings_system"
                 />
 
