@@ -59,7 +59,7 @@ import org.cyanogenmod.internal.util.ScreenType;
 
 import java.util.List;
 
-import com.android.internal.util.temasek.TemasekUtils;
+import com.android.internal.util.zeus.ZeusUtils;
 
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
@@ -613,7 +613,7 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
    private void updateNavBarSettings() {
         boolean enableNavigationBar = Settings.System.getInt(getContentResolver(),
                 Settings.System.NAVIGATION_BAR_SHOW,
-                TemasekUtils.isNavBarDefault(getActivity()) ? 1 : 0) == 1;
+                ZeusUtils.isNavBarDefault(getActivity()) ? 1 : 0) == 1;
         mEnableNavigationBar.setChecked(enableNavigationBar);
 
         if (mDimNavButtons != null) {

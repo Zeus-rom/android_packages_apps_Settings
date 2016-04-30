@@ -46,13 +46,13 @@ import android.view.View;
 import android.widget.EditText;
 
 import com.android.internal.logging.MetricsLogger;
-import com.android.internal.util.temasek.TemasekUtils;
+import com.android.internal.util.zeus.ZeusUtils;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.search.Indexable;
-import com.android.settings.temasek.SeekBarPreference;
+import com.android.settings.zeus.SeekBarPreference;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -333,7 +333,7 @@ public class StatusBarSettings extends SettingsPreferenceFragment
 
         // Show 4G
         mShowFourG = (SwitchPreference) findPreference(SHOW_FOURG);
-        if (TemasekUtils.isWifiOnly(getActivity())) {
+        if (ZeusUtils.isWifiOnly(getActivity())) {
             prefSet.removePreference(mShowFourG);
         } else {
            mShowFourG.setChecked((Settings.System.getInt(resolver,
