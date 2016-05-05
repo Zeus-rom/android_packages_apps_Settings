@@ -1221,7 +1221,7 @@
     <string name="nav_buttons_rotation_title">Rotation animation for icons</string>
     <string name="nav_buttons_rotation_summary">Enable for icons to rotate when screen is rotated or navbar recreated.</string>
 
-    <string name="zeus_navbar_settings">Navbar</string>
+    <string name="zeus_navbar_settings">Navigation Bar</string>
 
     <!-- Navigation Bar -->
     <string name="navbar_interface_title">Interface</string>
@@ -1401,4 +1401,14 @@
     <string name="smartbar_ime_action_arrows">Input arrows</string>
     <string name="smartbar_ime_action_switcher">Keyboard switcher</string>
 
+	<!-- ScreenRecord Shortcut -->
+	<string name="screen_record_shortcut">Screenrecord Shortcut</string>
+	<string name="screen_record_shortcut_on">Volume + Power Up triggers Screenrecord</string>
+	<string name="screen_record_shortcut_off">Volume + Power Up does nothing</string>
+	
+	<!-- ScreenShot Shortcut -->
+	<string name="screen_shot_shortcut">Screenshot Shortcut</string>
+	<string name="screen_shot_shortcut_on">Volume + Power Down triggers screenshot</string>
+	<string name="screen_shot_shortcut_off">Volume + Power Down does nothing</string>
+	
 </resources>

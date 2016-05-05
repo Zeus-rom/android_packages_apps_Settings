@@ -49,6 +49,13 @@
          android:fragment="com.android.settings.zeus.LockScreenSettings"
          android:title="@string/zeus_lockscreen_title" />
 
+     <!-- Navigation Bar -->
+     <PreferenceScreen
+        android:key="navbar"
+        android:fragment="com.android.settings.zeus.Navbar"
+        android:title="@string/zeus_navbar_settings" 
+        android:icon="@drawable/zeus_navbar_icon"/>
+
     <!-- Recent panel settings -->
     <PreferenceScreen
          android:key="recents_panel"

@@ -213,17 +213,6 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
 
         mHandler = new Handler();
 
-        // Navigation bar category
-        final PreferenceCategory navBarCategory = (PreferenceCategory) findPreference(CATEGORY_NAVBAR);
-
-        // Internal bool to check if the device have a navbar by default or not!
-        boolean hasNavBarByDefault = getResources().getBoolean(
-                com.android.internal.R.bool.config_showNavigationBar);
-        boolean enableNavigationBar = Settings.System.getInt(getContentResolver(),
-                Settings.System.NAVIGATION_BAR_SHOW, hasNavBarByDefault ? 1 : 0) == 1;
-        mEnableNavigationBar.setChecked(enableNavigationBar);
-        mEnableNavigationBar.setOnPreferenceChangeListener(this);
-
         // Enable/disable hw keys
         boolean enableHwKeys = Settings.System.getInt(getContentResolver(),
                 Settings.System.ENABLE_HW_KEYS, 1) == 1;
@@ -424,7 +413,6 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
         }
 
         updateDisableHwKeysOption();
-        updateNavBarSettings();
     }
 
     @Override
@@ -479,13 +467,6 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
     @Override
     protected int getMetricsCategory() {
         return CMMetricsLogger.BUTTON_SETTINGS;
-    }
-
-   private void updateNavBarSettings() {
-        boolean enableNavigationBar = Settings.System.getInt(getContentResolver(),
-                Settings.System.NAVIGATION_BAR_SHOW,
-                ZeusUtils.isNavBarDefault(getActivity()) ? 1 : 0) == 1;
-        mEnableNavigationBar.setChecked(enableNavigationBar);
     }
 
     @Override

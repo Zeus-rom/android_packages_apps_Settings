@@ -18,62 +18,6 @@
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
     <PreferenceCategory
-        android:key="nav_cat"
-        android:title="@string/nav_bar_title" >
-
-        <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
-            android:key="double_tap_sleep_navbar"
-            android:title="@string/double_tap_sleep_nav_bar_title"
-            android:summary="@string/double_tap_sleep_nav_bar_summary"
-            android:defaultValue="false"
-            android:dependency="enable_nav_bar" />
-
-    </PreferenceCategory>
-
-    <PreferenceCategory
-        android:key="dim_nav_buttons_cat"
-        android:title="@string/dim_nav_buttons_category">
-
-        <SwitchPreference
-            android:key="dim_nav_buttons"
-            android:title="@string/dim_nav_buttons_title"
-            android:dependency="enable_nav_bar"
-            android:summary="@string/dim_nav_buttons_summary" />
-
-        <SwitchPreference
-            android:key="dim_nav_buttons_touch_anywhere"
-            android:dependency="dim_nav_buttons"
-            android:title="@string/dim_nav_buttons_touch_anywhere_title"
-            android:summaryOn="@string/dim_nav_buttons_touch_anywhere_summary_on"
-            android:summaryOff="@string/dim_nav_buttons_touch_anywhere_summary_off" />
-
-        <SlimSeekBarPreference
-            android:key="dim_nav_buttons_timeout"
-            android:dependency="dim_nav_buttons"
-            android:title="@string/dim_nav_buttons_timeout_title"
-            android:summary="@string/dim_nav_buttons_timeout_summary" />
-
-        <SlimSeekBarPreference
-            android:key="dim_nav_buttons_alpha"
-            android:dependency="dim_nav_buttons"
-            android:title="@string/dim_nav_buttons_alpha_title"
-            android:summary="@string/dim_nav_buttons_alpha_summary" />
-
-        <SwitchPreference
-            android:key="dim_nav_buttons_animate"
-            android:dependency="dim_nav_buttons"
-            android:title="@string/dim_nav_buttons_animate_title"
-            android:summary="@string/dim_nav_buttons_animate_summary" />
-
-        <SlimSeekBarPreference
-            android:key="dim_nav_buttons_animate_duration"
-            android:dependency="dim_nav_buttons_animate"
-            android:title="@string/dim_nav_buttons_animate_duration_title"
-            android:summary="@string/dim_nav_buttons_animate_duration_summary" />
-
-    </PreferenceCategory>
-
-    <PreferenceCategory
         android:key="hw_keys"
         android:title="@string/hw_keys_title">
 
@@ -297,6 +241,20 @@
             android:entries="@array/volbtn_cursor_control_entries"
             android:entryValues="@array/volbtn_cursor_control_values"
             android:persistent="false" />
+
+	<com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+            android:key="screen_shot_shortcut"
+            android:title="@string/screen_shot_shortcut"
+            android:summaryOn="@string/screen_shot_shortcut_on"
+            android:summaryOff="@string/screen_shot_shortcut_off"
+            android:defaultValue="true" />
+
+	<com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+            android:key="screen_record_shortcut"
+            android:title="@string/screen_record_shortcut"
+            android:summaryOn="@string/screen_record_shortcut_on"
+            android:summaryOff="@string/screen_record_shortcut_off"
+            android:defaultValue="true" />
 
         <SwitchPreference
             android:key="swap_volume_buttons"
