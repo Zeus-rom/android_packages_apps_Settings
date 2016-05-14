@@ -37,6 +37,12 @@
          android:fragment="com.android.settings.zeus.LockClock"
          android:title="@string/lock_clock_title" />
 
+    <!-- Header Colors -->
+    <PreferenceScreen
+         android:key="colors"
+         android:fragment="com.android.settings.zeus.NotificationPanel"
+         android:title="Header Colors" />
+
     <!-- Gesture anywhere -->
     <PreferenceScreen
          android:key="gesture_anywhere"
