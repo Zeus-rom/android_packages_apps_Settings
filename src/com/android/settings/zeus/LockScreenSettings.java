@@ -46,16 +46,12 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements On
     private static final String LOCKSCREEN_CLOCK_COLOR = "lockscreen_clock_color";
     private static final String LOCKSCREEN_CLOCK_DATE_COLOR = "lockscreen_clock_date_color";
     private static final String LOCKSCREEN_COLORS_RESET = "lockscreen_colors_reset";
-    private static final String LOCKSCREEN_OWNER_INFO_COLOR = "lockscreen_owner_info_color";
-    private static final String LOCKSCREEN_ALARM_COLOR = "lockscreen_alarm_color";
 
     private ListPreference mLockClockFonts;
     private ColorPickerPreference mLockscreenOwnerInfoColorPicker;
     private ColorPickerPreference mLockscreenAlarmColorPicker;
     private ColorPickerPreference mLockscreenClockColorPicker;
     private ColorPickerPreference mLockscreenClockDateColorPicker;
-    private ColorPickerPreference mLockscreenOwnerInfoColorPicker;
-    private ColorPickerPreference mLockscreenAlarmColorPicker;
     private Preference mLockscreenColorsReset;
 
     static final int DEFAULT = 0xffffffff;
@@ -113,22 +109,6 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements On
         mLockscreenClockDateColorPicker.setSummary(hexColor);
         mLockscreenClockDateColorPicker.setNewPreviewColor(intColor);
 
-       mLockscreenOwnerInfoColorPicker = (ColorPickerPreference) findPreference(LOCKSCREEN_OWNER_INFO_COLOR);
-       mLockscreenOwnerInfoColorPicker.setOnPreferenceChangeListener(this);
-       intColor = Settings.System.getInt(resolver,
-       		   Settings.System.LOCKSCREEN_OWNER_INFO_COLOR, DEFAULT);
-       hexColor = String.format("#%08x", (0xffffffff & intColor));
-       mLockscreenOwnerInfoColorPicker.setSummary(hexColor);
-       mLockscreenOwnerInfoColorPicker.setNewPreviewColor(intColor);
-
-       mLockscreenAlarmColorPicker = (ColorPickerPreference) findPreference(LOCKSCREEN_ALARM_COLOR);
-       mLockscreenAlarmColorPicker.setOnPreferenceChangeListener(this);
-       intColor = Settings.System.getInt(resolver,
-                  Settings.System.LOCKSCREEN_ALARM_COLOR, DEFAULT);
-       hexColor = String.format("#%08x", (0xffffffff & intColor));
-       mLockscreenAlarmColorPicker.setSummary(hexColor);
-       mLockscreenAlarmColorPicker.setNewPreviewColor(intColor);
-
         mLockscreenColorsReset = (Preference) findPreference(LOCKSCREEN_COLORS_RESET);
     }
 
@@ -178,23 +158,7 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements On
             Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
                     Settings.System.LOCKSCREEN_CLOCK_DATE_COLOR, intHex);
             return true;
-         } else if (preference == mLockscreenOwnerInfoColorPicker) {
-                String hex = ColorPickerPreference.convertToARGB(
-                        Integer.valueOf(String.valueOf(newValue)));
-                preference.setSummary(hex);
-                int intHex = ColorPickerPreference.convertToColorInt(hex);
-                Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
-                        Settings.System.LOCKSCREEN_OWNER_INFO_COLOR, intHex);
-                return true;
-            } else if (preference == mLockscreenAlarmColorPicker) {
-                String hex = ColorPickerPreference.convertToARGB(
-                        Integer.valueOf(String.valueOf(newValue)));
-                preference.setSummary(hex);
-                int intHex = ColorPickerPreference.convertToColorInt(hex);
-                Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
-                        Settings.System.LOCKSCREEN_ALARM_COLOR, intHex);
-                return true;
-	}
+        }
         return false;
     }
 
@@ -238,13 +202,5 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements On
                 Settings.System.LOCKSCREEN_CLOCK_DATE_COLOR, DEFAULT);
         mLockscreenClockDateColorPicker.setNewPreviewColor(DEFAULT);
         mLockscreenClockDateColorPicker.setSummary(R.string.default_string);
-	Settings.System.putInt(resolver,
-                Settings.System.LOCKSCREEN_OWNER_INFO_COLOR, DEFAULT);
-        mLockscreenOwnerInfoColorPicker.setNewPreviewColor(DEFAULT);
-        mLockscreenOwnerInfoColorPicker.setSummary(R.string.default_string);
-        Settings.System.putInt(resolver,
-                Settings.System.LOCKSCREEN_ALARM_COLOR, DEFAULT);
-        mLockscreenAlarmColorPicker.setNewPreviewColor(DEFAULT);
-        mLockscreenAlarmColorPicker.setSummary(R.string.default_string);
     }
 }
