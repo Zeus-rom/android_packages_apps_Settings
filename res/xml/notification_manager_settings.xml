@@ -63,6 +63,6 @@
     <PreferenceScreen
             android:id="@+id/notification_colors"
             android:title="@string/cat_colors_title"
-            android:fragment="com.android.settings.temasek.NotificationColorSettings" />
+            android:fragment="com.android.settings.zeus.NotificationColorSettings" />
 
 </PreferenceScreen>
