@@ -187,6 +187,11 @@ public class ColorPickerPreference extends Preference implements
         mAlphaSliderEnabled = enable;
     }
 
+    public void setDefaultColors(int androidColor, int darkkatColor) {
+        mAndroidColor = androidColor;
+        mDarkKatColor = darkkatColor;
+    }
+
     /**
      * For custom purposes. Not used by ColorPickerPreferrence
      *
