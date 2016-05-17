@@ -122,6 +122,11 @@
             android:fragment="com.android.settings.zeus.CarrierLabel"
             android:title="@string/carrier_options" />
 
+     <PreferenceScreen
+        android:key="status_bar_colors"
+	android:fragment="com.android.settings.zeus.StatusColors"
+        android:title="@string/status_bar_colors_title" />
+
         <com.android.settings.cyanogenmod.CMSystemSettingSwitchPreference
             android:key="status_bar_notif_count"
             android:title="@string/status_bar_notif_count_title"
