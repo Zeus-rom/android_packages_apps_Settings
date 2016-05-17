@@ -1472,4 +1472,7 @@
     <string name="status_bar_notification_icons">Notification icons colors</string>
     <string name="network_status_icons_cat_status_colors_title">Statusbar icons color</string>
 
+	<string name="lock_screen_show_current">Charging Current</string>
+	<string name="lock_screen_show_current_summary">Show Charging Current rate on lock screen</string>
+
 </resources>
