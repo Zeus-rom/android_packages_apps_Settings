@@ -68,6 +68,12 @@
 	    android:summary="@string/qs_colors_summary"	
             android:fragment="com.android.settings.zeus.QsColors" />
 
+    <!-- Qs Vibrate Panel -->
+    <PreferenceScreen
+            android:key="qs_vib_customizations"
+            android:title="@string/quick_settings_vibrate"
+            android:fragment="com.android.settings.zeus.QsVibrate" />
+
     <!-- Recent panel settings -->
     <PreferenceScreen
          android:key="recents_panel"

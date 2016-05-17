@@ -1444,4 +1444,17 @@
     <string name="apply_qs_colors">Apply Colors</string>
     <string name="apply_qs_colors_summary">Tap Here To Apply Changes</string>
 
+    <!-- QuickSettings haptic feedback -->
+    <string name="quick_settings_vibrate">QS Vibrations</string>	
+    <string name="quick_settings_vibrate_title">Vibrate on touch</string>
+    <string name="quick_settings_vibrate_summary">Vibrate when touching tiles</string>
+
+    <!-- QuickSettings haptic feedback -->
+    <string name="quick_settings_icon_vibrate_title">Vibrate Settings Icon </string>
+    <string name="quick_settings_icon_vibrate_summary">Vibrate when touching Settings Icon</string>
+
+    <!-- QuickSettings haptic feedback -->
+    <string name="quick_settings_sp_vibrate_title">Vibrate on Single Press </string>
+    <string name="quick_settings_sp_vibrate_summary">Vibrate when touching SinglePressing Tiles</string>
+
 </resources>
