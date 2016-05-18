@@ -1474,4 +1474,12 @@
 	<string name="lock_screen_show_current">Charging Current</string>
 	<string name="lock_screen_show_current_summary">Show Charging Current rate on lock screen</string>
 
+    <string name="status_bar_color_enable">Statusbar Colors</string>
+    <string name="statusbar_color_switch">Custom Icon Colors</string>
+
+    <string name="battery_color">Battery</string>
+    <string name="battery_icon_color">Icon (While Charging Only)</string>
+    <string name="battery_text_color">Text</string>
+    <string name="statusbar_color_switch_summary">Enable/Disable Custom Icon Colors</string>
+
 </resources>
