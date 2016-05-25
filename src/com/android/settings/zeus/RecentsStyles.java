@@ -68,8 +68,6 @@ public class RecentsStyles extends SettingsPreferenceFragment  implements Prefer
 
 
     private static final String FAB_ANIM_STYLE = "fab_animation_style";
-    private static final String CLEAR_ANIM_STYLE = "clear_animation_style";
-    private static final String LONG_ANIM = "recents_fab_lp_anim";
 
     static final int DEFAULT = 0xffffffff;
     static final int DEFAULT_BG_CLEAR_ALL = 0xffffffff;	
@@ -88,8 +86,6 @@ public class RecentsStyles extends SettingsPreferenceFragment  implements Prefer
 
     private ListPreference mClearStyle;
     private ListPreference mFabanimation;
-    private ListPreference mClearanimation;
-    private ListPreference mLonganimation;
 
  @Override
     protected int getMetricsCategory() {
@@ -127,18 +123,6 @@ public class RecentsStyles extends SettingsPreferenceFragment  implements Prefer
         mFabanimation.setSummary(mFabanimation.getEntry());
         mFabanimation.setOnPreferenceChangeListener(this);
 
-
-        mClearanimation = (ListPreference) prefSet.findPreference(CLEAR_ANIM_STYLE);
-        mClearanimation.setValue(String.valueOf(Settings.System.getInt(
-                getContentResolver(), Settings.System.CLEAR_ANIMATION_STYLE, 0)));
-        mClearanimation.setSummary(mClearanimation.getEntry());
-        mClearanimation.setOnPreferenceChangeListener(this);
-
-        mLonganimation = (ListPreference) prefSet.findPreference(LONG_ANIM);
-        mLonganimation.setValue(String.valueOf(Settings.System.getInt(
-                getContentResolver(), Settings.System.RECENTS_FAB_LP_ANIM, 0)));
-        mLonganimation.setSummary(mLonganimation.getEntry());
-        mLonganimation.setOnPreferenceChangeListener(this);
 
         mMemTextColor = (ColorPickerPreference) prefSet.findPreference(MEM_TEXT_COLOR);
         mMemTextColor.setOnPreferenceChangeListener(this);
@@ -246,16 +230,6 @@ public class RecentsStyles extends SettingsPreferenceFragment  implements Prefer
                     Integer.valueOf((String) newValue));
             mFabanimation.setValue(String.valueOf(newValue));
             mFabanimation.setSummary(mFabanimation.getEntry());  
-	} else if (preference == mClearanimation) {
-            Settings.System.putInt(getContentResolver(), Settings.System.CLEAR_ANIMATION_STYLE,
-                    Integer.valueOf((String) newValue));
-            mClearanimation.setValue(String.valueOf(newValue));
-            mClearanimation.setSummary(mClearanimation.getEntry());  
-	} else if (preference == mLonganimation) {
-            Settings.System.putInt(getContentResolver(), Settings.System.RECENTS_FAB_LP_ANIM,
-                    Integer.valueOf((String) newValue));
-            mLonganimation.setValue(String.valueOf(newValue));
-            mLonganimation.setSummary(mLonganimation.getEntry());
         }
      return false;
     }
