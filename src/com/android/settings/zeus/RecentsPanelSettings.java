@@ -64,6 +64,7 @@ public class RecentsPanelSettings extends SettingsPreferenceFragment implements
     private static final String SHOW_MEMBAR_RECENTS = "systemui_recents_mem_display";
     private static final String SHOW_FULLSCREEN_RECENTS = "recents_full_screen";
     private static final String SHOW_CLEAR_ALL_RECENTS = "show_clear_all_recents";
+    private static final String RECENTS_STYLE = "clear_recents_style";
     private static final String RECENTS_DISMISS_ALL = "recents_clear_all_dismiss_all";
     private static final String RECENTS_CLEAR_ALL_LOCATION = "recents_clear_all_location";
     private static final String PREF_HIDDEN_RECENTS_APPS_START = "hide_app_from_recents";
@@ -111,6 +112,7 @@ public class RecentsPanelSettings extends SettingsPreferenceFragment implements
     private ColorPickerPreference mRecentCardBgColor;
     private ColorPickerPreference mRecentCardTextColor;
     private Preference mHiddenRecentsApps;
+    private ListPreference mClearStyle;	
 
     private static final int MENU_RESET = Menu.FIRST;
     private static final int DEFAULT_BACKGROUND_COLOR = 0x00ffffff;
@@ -145,6 +147,12 @@ public class RecentsPanelSettings extends SettingsPreferenceFragment implements
         mUseSlimRecents.setOnPreferenceChangeListener(this);
 
         mHiddenRecentsApps = (Preference) prefSet.findPreference(PREF_HIDDEN_RECENTS_APPS_START);
+
+        mClearStyle = (ListPreference) prefSet.findPreference(RECENTS_STYLE);
+        mClearStyle.setValue(String.valueOf(Settings.System.getInt(
+                getContentResolver(), Settings.System.CLEAR_RECENTS_STYLE, 0)));
+        mClearStyle.setSummary(mClearStyle.getEntry());
+        mClearStyle.setOnPreferenceChangeListener(this);
 
         updatePreference();
     }
@@ -258,6 +266,11 @@ public class RecentsPanelSettings extends SettingsPreferenceFragment implements
             Settings.System.putInt(getContentResolver(),
                 Settings.System.RECENTS_MAX_APPS, value);
             return true;
+        } else if (preference == mClearStyle) {
+            Settings.System.putInt(getContentResolver(), Settings.System.CLEAR_RECENTS_STYLE,
+                    Integer.valueOf((String) newValue));
+            mClearStyle.setValue(String.valueOf(newValue));
+            mClearStyle.setSummary(mClearStyle.getEntry());
         }
         return false;
     }
