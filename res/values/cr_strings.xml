@@ -96,7 +96,16 @@
     <string name="recents_clear_all_location_bottom_center">Bottom center</string>
     <string name="recents_clear_all_dismiss_all_title">Clear all tasks</string>
     <string name="recents_clear_all_dismiss_all_summary">Choose whether to dismiss all tasks or ignore the foreground task</string>
-    <string name="clear_recents_style">Button Style</string>	
+    <string name="clear_recents_style">Button Style</string>
+    <string name="fab_button_color">Button BG</string>	
+    <string name="mem_bar_color">Memory Bar</string>	
+    <string name="recents_styles_1">Styles</string>
+    <string name="recents_colors">Styles</string>
+    <string name="recents_style_2">Colors</string>
+    <string name="recent_styles">Recent Styles </string>
+    <string name="recent_styles_summary">Customize Various Elements In Recents </string>
+    <string name="mem_text_color">MemBar Text</string>	
+    <string name="clear_button_color">Clear All</string>	
     <string name="clear_recents_style_enable">Custom ClearAll Button</string>	
     <string name="clear_recents_style_enable_summary">Enable / Disable Custom ClearAll Button</string>	
     <string name="button1">Button 1 </string>	
