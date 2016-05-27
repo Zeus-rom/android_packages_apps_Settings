@@ -1558,4 +1558,8 @@
     <string name="captive_portal_detection">Captive portal detection</string>
     <string name="captive_portal_detection_summary">If disabled, a connection to google servers is not required in order to detect data connection.</string>
 
+    <!-- Battery fully charged notification -->
+    <string name="battery_fully_charged_notif_title">Battery fully charged notification</string>
+    <string name="battery_fully_charged_notif_summary">Show a notification when the battery is fully charged</string>
+
 </resources>
