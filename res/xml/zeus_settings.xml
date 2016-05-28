@@ -43,6 +43,12 @@
          android:fragment="com.android.settings.zeus.NotificationPanel"
          android:title="Header Colors" />
 
+    <!-- Header Images -->
+    <PreferenceScreen
+         android:key="header_images"
+         android:fragment="com.android.settings.cyanogenmod.StatusBarSettings"
+         android:title="@string/status_bar_custom_header_title" />
+
     <!-- Gesture anywhere -->
     <PreferenceScreen
          android:key="gesture_anywhere"
