@@ -90,7 +90,7 @@
         <PreferenceScreen
             android:key="recent_styles"
             android:title="@string/recent_styles"
-	    android:fragment="com.android.settings.zeus.RecentsStyles"
+	    android:fragment="com.android.settings.rr.RecentsStyles"
 	    android:summary="@string/recent_styles_summary"/>
 
         <!-- Hide Apps from Recents (HAFR) -->
