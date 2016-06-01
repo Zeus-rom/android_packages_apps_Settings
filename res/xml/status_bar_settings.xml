@@ -189,27 +189,19 @@
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:title="@string/status_bar_header_title" >
+        android:key="category_header_options"
+        android:title="@string/contexual_header_title" >
+
+        <SwitchPreference
+           android:key="status_bar_custom_header"
+           android:title="@string/status_bar_custom_header_title"
+           android:summary="@string/status_bar_custom_header_summary"
+           android:defaultValue="false"/>
 
         <ListPreference
-            android:key="status_bar_header_font_style"
-            android:entries="@array/status_bar_weather_font_style_entries"
-            android:entryValues="@array/status_bar_weather_font_style_values"
-            android:title="@string/status_bar_header_font_style_title" />
-
-        <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
-            android:key="status_bar_custom_header"
-            android:title="@string/status_bar_custom_header_title"
-            android:summary="@string/status_bar_custom_header_summary"
-            android:defaultValue="false"/>
-
-        <ListPreference
-            android:key="status_bar_custom_header_default"
-            android:title="@string/status_bar_custom_header_default_title"
-            android:dialogTitle="@string/status_bar_custom_header_default_title"
-            android:entries="@array/custom_header_entries"
-            android:entryValues="@array/custom_header_values"
-            android:dependency="status_bar_custom_header"/>
+           android:key="daylight_header_pack"
+           android:title="@string/daylight_header_pack_title"
+           android:persistent="false" />
 
         <com.android.settings.zeus.SeekBarPreference
             android:key="status_bar_custom_header_shadow"
@@ -222,6 +214,12 @@
             settings:unitsRight="%"
             android:persistent="false"
             android:dependency="status_bar_custom_header" />
+
+        <ListPreference
+            android:key="status_bar_header_font_style"
+            android:entries="@array/status_bar_weather_font_style_entries"
+            android:entryValues="@array/status_bar_weather_font_style_values"
+            android:title="@string/status_bar_header_font_style_title" />
 
     </PreferenceCategory>
 
