@@ -38,18 +38,36 @@ import com.android.internal.utils.du.Config.ButtonConfig;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.MenuInflater;
+import android.util.Log;
+
+import net.margaritov.preference.colorpicker.ColorPickerPreference;
+
 public class SmartbarSettings extends SettingsPreferenceFragment implements
         OnPreferenceChangeListener {
     private ListPreference mSmartBarContext;
     private ListPreference mImeActions;
     private ListPreference mButtonAnim;
-
+    private static final String NAVBAR_COLOR = "navbar_button_color";
+    private static final int MENU_RESET = Menu.FIRST;
+	
+    private ColorPickerPreference mNavbuttoncolor;
+  
+    static final int DEFAULT = 0xffffffff;
+    static final int DEFAULT_BG = 0xff263238;
+    static final int DEFAULT_HEADER_BG = 0xff384248;
+    static final int DEFAULT_SECONDARY_TEXT = 0xb3ffffff;
+    static final int DEFAULT_TEXT = 0xffffffff;
     private Context mContext;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.smartbar_settings);
+        int intColor;
+        String hexColor;
 
         mContext = getContext();
 
@@ -70,6 +88,14 @@ public class SmartbarSettings extends SettingsPreferenceFragment implements
         mButtonAnim = (ListPreference) findPreference("smartbar_button_animation");
         mButtonAnim.setValue(String.valueOf(buttonAnimVal));
         mButtonAnim.setOnPreferenceChangeListener(this);
+
+        mNavbuttoncolor = (ColorPickerPreference) findPreference(NAVBAR_COLOR);
+        mNavbuttoncolor.setOnPreferenceChangeListener(this);
+        intColor = Settings.System.getInt(getContentResolver(),
+                    Settings.System.NAVBAR_BUTTON_COLOR, DEFAULT);
+        hexColor = String.format("#%08x", (0xffffffff & intColor));
+        mNavbuttoncolor.setSummary(hexColor);
+        mNavbuttoncolor.setNewPreviewColor(intColor);
     }
 
     @Override
@@ -122,12 +148,59 @@ public class SmartbarSettings extends SettingsPreferenceFragment implements
             Settings.Secure.putInt(getContentResolver(), "smartbar_ime_hint_mode",
                     val);
             return true;
-        }
+        } else if (preference == mNavbuttoncolor) {
+            String hex = ColorPickerPreference.convertToARGB(
+                    Integer.valueOf(String.valueOf(newValue)));
+            preference.setSummary(hex);
+            int intHex = ColorPickerPreference.convertToColorInt(hex);
+            Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
+                    Settings.System.NAVBAR_BUTTON_COLOR, intHex);
+            return true;
+         }
         return false;
     }
 
     @Override
     protected int getMetricsCategory() {
         return MetricsLogger.APPLICATION;
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        menu.add(0, MENU_RESET, 0, R.string.reset)
+                .setIcon(R.drawable.ic_settings_reset)
+                .setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case MENU_RESET:
+                resetToDefault();
+                return true;
+            default:
+                return super.onContextItemSelected(item);
+        }
+    }
+
+    private void resetToDefault() {
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
+        alertDialog.setTitle(R.string.header_colors_reset_title);
+        alertDialog.setMessage(R.string.header_colors_reset_message);
+        alertDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                resetValues();
+            }
+        });
+        alertDialog.setNegativeButton(R.string.cancel, null);
+        alertDialog.create().show();
+    }
+
+    private void resetValues() {
+        Settings.System.putInt(getContentResolver(),
+                Settings.System.NAVBAR_BUTTON_COLOR, DEFAULT);
+        mNavbuttoncolor.setNewPreviewColor(DEFAULT);
+        mNavbuttoncolor.setSummary(R.string.default_string);
+
     }
 }
