@@ -144,7 +144,9 @@ import com.android.settings.wifi.SavedAccessPointsWifiSettings;
 import com.android.settings.wifi.WifiSettings;
 import com.android.settings.wifi.p2p.WifiP2pSettings;
 
+
 import cyanogenmod.app.CMContextConstants;
+import com.android.settings.slim.fragments.DozeSettingsFragment;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
@@ -389,6 +391,7 @@ public class SettingsActivity extends Activity
             LiveLockScreenSettings.class.getName(),
             WeatherServiceSettings.class.getName(),
             HeadsUpSettings.class.getName(),
+            DozeSettingsFragment.class.getName(),
             Navbar.class.getName(),
             FlingSettings.class.getName(),
             SmartbarSettings.class.getName()
