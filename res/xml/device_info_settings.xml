@@ -130,11 +130,11 @@
                 android:title="@string/mem_info"
                 android:summary="@string/device_info_default"/>
 
-        <!-- zeus version -->
-        <Preference android:key="zeus_version"
+        <!-- Developer -->
+        <Preference android:key="developer"
                 style="?android:preferenceInformationStyle"
-                android:title="@string/zeus_version_title"
-                android:summary="@string/zeus_version_default"/>
+                android:title="@string/developer_title"
+                android:summary="@string/developer_name"/>
 
         <!-- Android version -->
         <Preference android:key="android_version"
