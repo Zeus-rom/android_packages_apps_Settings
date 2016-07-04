@@ -42,6 +42,8 @@ import static android.provider.Settings.System.SCREEN_BRIGHTNESS_MODE;
 import static android.provider.Settings.System.SCREEN_BRIGHTNESS_MODE_AUTOMATIC;
 import static android.provider.Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL;
 import static android.provider.Settings.System.SCREEN_OFF_TIMEOUT;
+import static android.provider.Settings.System.SCREENSHOT_CROP_AND_SHARE;
+import static android.provider.Settings.System.SCREENSHOT_CROP_BEHAVIOR;
 
 import android.app.Activity;
 import android.app.ActivityManagerNative;
@@ -97,6 +99,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final int FALLBACK_SCREEN_TIMEOUT_VALUE = 30000;
 
     private static final String KEY_CATEGORY_LIGHTS = "lights";
+    private static final String KEY_CATEGORY_SCREENSHOT = "screenshot";
     private static final String KEY_CATEGORY_DISPLAY = "display";
     private static final String KEY_CATEGORY_INTERFACE = "interface";
     private static final String KEY_SCREEN_TIMEOUT = "screen_timeout";
@@ -118,6 +121,8 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String KEY_DOZE = "doze";
     private static final String KEY_ADVANCED_DOZE_OPTIONS = "advanced_doze_options";
     private static final String KEY_LIVEDISPLAY = "live_display";
+    private static final String KEY_SCREENSHOT_CROP_AND_SHARE = "screenshot_crop_and_share";
+    private static final String KEY_SCREENSHOT_CROP_BEHAVIOR = "screenshot_crop_behavior";
 
     private static final String DASHBOARD_COLUMNS = "dashboard_columns";
     private static final String DASHBOARD_SWITCHES = "dashboard_switches";
@@ -140,6 +145,8 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private SwitchPreference mProximityCheckOnWakePreference;
     private SwitchPreference mAutoBrightnessPreference;
     private SwitchPreference mWakeWhenPluggedOrUnplugged;
+    private SwitchPreference mScreenshotCropAndSharePreference;
+    private SwitchPreference mScreenshotCropBehaviorPreference;
     private ListPreference mDashboardColumns;
     private ListPreference mDashboardSwitches;
 
@@ -180,6 +187,8 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                 findPreference(KEY_CATEGORY_DISPLAY);
         PreferenceCategory interfacePrefs = (PreferenceCategory)
                 findPreference(KEY_CATEGORY_INTERFACE);
+        PreferenceCategory screenshotPrefs = (PreferenceCategory)
+                findPreference(KEY_CATEGORY_SCREENSHOT);
         mDisplayRotationPreference = (PreferenceScreen) findPreference(KEY_DISPLAY_ROTATION);
         mAccelerometer = (SwitchPreference) findPreference(DisplayRotation.KEY_ACCELEROMETER);
         if (mAccelerometer != null) {
@@ -315,6 +324,24 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         } else {
             if (displayPrefs != null && mTapToWakePreference != null) {
                 displayPrefs.removePreference(mTapToWakePreference);
+            }
+        }
+
+        mScreenshotCropAndSharePreference = (SwitchPreference) findPreference(KEY_SCREENSHOT_CROP_AND_SHARE);
+        if (mScreenshotCropAndSharePreference != null) {
+            mScreenshotCropAndSharePreference.setOnPreferenceChangeListener(this);
+        } else {
+            if (screenshotPrefs != null && mScreenshotCropAndSharePreference != null) {
+                screenshotPrefs.removePreference(mScreenshotCropAndSharePreference);
+            }
+        }
+
+        mScreenshotCropBehaviorPreference = (SwitchPreference) findPreference(KEY_SCREENSHOT_CROP_BEHAVIOR);
+        if (mScreenshotCropBehaviorPreference != null) {
+            mScreenshotCropBehaviorPreference.setOnPreferenceChangeListener(this);
+        } else {
+            if (screenshotPrefs != null && mScreenshotCropBehaviorPreference != null) {
+                screenshotPrefs.removePreference(mScreenshotCropBehaviorPreference);
             }
         }
 
@@ -595,6 +622,17 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             mTapToWakePreference.setChecked(value != 0);
         }
 
+        // Update crop and share if it is available.
+        if (mScreenshotCropAndSharePreference != null) {
+            int value = Settings.System.getInt(getContentResolver(), SCREENSHOT_CROP_AND_SHARE, 1);
+            mScreenshotCropAndSharePreference.setChecked(value != 0);
+        }
+
+        if (mScreenshotCropBehaviorPreference != null) {
+            int value = Settings.System.getInt(getContentResolver(), SCREENSHOT_CROP_BEHAVIOR, 1);
+            mScreenshotCropBehaviorPreference.setChecked(value != 0);
+        }
+
         // Update camera gesture #1 if it is available.
         if (mCameraGesturePreference != null) {
             int value = Settings.Secure.getInt(getContentResolver(), CAMERA_GESTURE_DISABLED, 0);
@@ -745,6 +783,14 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         if (preference == mTapToWakePreference) {
             boolean value = (Boolean) objValue;
             Settings.Secure.putInt(getContentResolver(), DOUBLE_TAP_TO_WAKE, value ? 1 : 0);
+        }
+        if (preference == mScreenshotCropAndSharePreference) {
+            boolean value = (Boolean) objValue;
+            Settings.System.putInt(getContentResolver(), SCREENSHOT_CROP_AND_SHARE, value ? 1 : 0);
+        }
+        if (preference == mScreenshotCropBehaviorPreference) {
+            boolean value = (Boolean) objValue;
+            Settings.System.putInt(getContentResolver(), SCREENSHOT_CROP_BEHAVIOR, value ? 1 : 0);
         }
         if (preference == mCameraGesturePreference) {
             boolean value = (Boolean) objValue;
