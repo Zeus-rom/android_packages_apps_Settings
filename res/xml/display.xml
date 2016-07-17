@@ -212,6 +212,24 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+            android:key="screenshot"
+            android:title="@string/screenshot_cat_title">
+
+        <SwitchPreference
+            android:key="screenshot_crop_and_share"
+            android:title="@string/screenshot_crop_and_share_title"
+            android:summary="@string/screenshot_crop_and_share_summary"
+            android:defaultValue="true" />
+
+        <SwitchPreference
+            android:key="screenshot_crop_behavior"
+            android:title="@string/screenshot_crop_behavior_title"
+            android:summary="@string/screenshot_crop_behavior_summary"
+            android:defaultValue="true" />
+
+   </PreferenceCategory>
+
+    <PreferenceCategory
             android:key="lights"
             android:title="@string/category_lights">
 

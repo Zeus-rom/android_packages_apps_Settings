@@ -55,12 +55,6 @@
          android:fragment="com.android.settings.zeus.LockScreenSettings"
          android:title="@string/zeus_lockscreen_title" />
 
-    <!-- Misc Settings -->
-    <PreferenceScreen
-         android:key="misc_settings"
-         android:fragment="com.android.settings.DisplaySettings"
-         android:title="Misc Settings" />
-
      <!-- Navigation Bar -->
      <PreferenceScreen
         android:key="navbar"
