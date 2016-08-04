@@ -122,7 +122,7 @@
                settings:minimum="0"
                settings:unitsLeft=""
                settings:unitsRight=""
-               settings:defaultVal="0"
+               settings:defaultVal="2"
                android:persistent="false" />
 
              <com.android.settings.zeus.SeekBarPreference
