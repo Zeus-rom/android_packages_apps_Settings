@@ -1398,7 +1398,8 @@
 
     <string name="pulse_custom_div">Pulse Bar Spacing</string>
     <string name="default_div">Default</string>
-
+    <string name="pulse_filled_block_size">Block Size</string>
+    <string name="pulse_empty_block_size">Block Spacing</string>
     <string name="pulse_custom_fudge_factor">Visualizer Sanity Level</string>
 
     <string name="pulse_solid_fudge_factor">Sanity Level</string>
